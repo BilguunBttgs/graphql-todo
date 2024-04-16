@@ -1,7 +1,7 @@
 Learning Graphql and best practise eslint.
 
--Next js
--Tailwind css
--Graphql
--Eslint
--Shadcn
+<h2>-Next js</h2>
+<h2>-Tailwind css</h2>
+<h2>-Graphql</h2>
+<h2>-Eslint</h2>
+<h2>-Shadcn</h2>
