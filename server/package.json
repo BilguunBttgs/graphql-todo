@@ -1,15 +1,31 @@
 {
   "name": "server",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@apollo/server": "^4.10.3",
-    "graphql": "^16.8.1"
+    "@apollo/subgraph": "^2.7.3",
+    "apollo-server-cloud-functions": "^3.13.0",
+    "graphql": "^16.8.1",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.2",
+    "next": "14.2.2",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "dotenv": "^16.4.5",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.2",
+    "typescript": "^5"
   }
 }
