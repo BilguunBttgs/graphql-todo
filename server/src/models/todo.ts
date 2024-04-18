@@ -14,12 +14,11 @@ const todoSchema = new Schema<Todo>({
   },
   createdAt: {
     type: Date,
-    default: Date.now,
   },
   isCompleted: {
     type: Boolean,
     default: false,
   },
 });
-const todoModel = model<Todo>("Todo", todoSchema);
+const todoModel = model<Todo>("TodoList", todoSchema);
 export default todoModel;
