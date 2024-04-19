@@ -10,7 +10,7 @@ export type Todo = {
 const todoSchema = new Schema<Todo>({
   item: {
     type: String,
-    required: true,
+    // required: true,
   },
   createdAt: {
     type: Date,

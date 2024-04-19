@@ -4,12 +4,12 @@ export const typeDefs = gql`
   type Todo {
     _id: ID!
     item: String!
-    isCompleted: Boolean!
+    isCompleted: Boolean
     createdAt: String!
   }
 
   type Query {
-    getTodos: [Todo!]!
+    getTodos: [Todo]
   }
 
   type Mutation {
