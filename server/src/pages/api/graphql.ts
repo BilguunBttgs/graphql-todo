@@ -14,22 +14,6 @@ const server = new ApolloServer({
   schema: buildSubgraphSchema({
     typeDefs,
     resolvers: resolvers as GraphQLResolverMap<unknown>,
-    // {
-    //   Query: {
-    //     getTodos,
-    //   },
-    //   Mutation: {
-    //     createTodo: async (_, { item }) => {
-    //       try {
-    //         const todo = await todoModel.create({ item });
-    //         return todo;
-    //       } catch (error) {
-    //         console.log("Error in create todo", error);
-    //         throw error;
-    //       }
-    //     },
-    //   },
-    // },
   }),
   introspection: true,
   csrfPrevention: true,

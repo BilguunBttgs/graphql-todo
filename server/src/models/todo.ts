@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, models } from "mongoose";
 
 export type Todo = {
   _id: string;
@@ -20,5 +20,5 @@ const todoSchema = new Schema<Todo>({
     default: false,
   },
 });
-const todoModel = model<Todo>("TodoList", todoSchema);
+const todoModel = models.TodoList || model<Todo>("TodoList", todoSchema);
 export default todoModel;
