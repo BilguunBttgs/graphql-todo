@@ -23,7 +23,7 @@ export default function Home() {
         <TodoInput />
         <div className="mt-8">
           <h2>Task to do - 4</h2>
-          {data.getTodos?.map((todo) => (
+          {data.getTodos?.map((todo: any) => (
             <OneTodo todo={todo} />
           ))}
         </div>
