@@ -15,15 +15,24 @@ export default function Home() {
       }
     }
   `;
+  const CREATE_TODO = gql`
+    mutation CreateTodo($item: String!) {
+      createTodo(item: $item) {
+        _id
+        item
+        isCompleted
+      }
+    }
+  `;
   const { loading, error, data } = useQuery(GET_TODOS);
   console.log("DATA", data);
   return (
     <main className="w-screen h-screen bg-[#0C0714] flex justify-center items-center text-white">
       <div className="bg-[#1d1825] w-[500px] h-[700px] rounded-xl p-10">
-        <TodoInput />
+        <TodoInput CREATE_TODO={CREATE_TODO} />
         <div className="mt-8">
           <h2>Task to do - 4</h2>
-          {data.getTodos?.map((todo: any) => (
+          {data?.getTodos?.map((todo: any) => (
             <OneTodo todo={todo} />
           ))}
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 type Props = {};
 
-const TodoInput = (props: Props) => {
+const TodoInput = ({ CREATE_TODO }: any) => {
   return (
     <div className="flex w-full justify-between">
       <input
