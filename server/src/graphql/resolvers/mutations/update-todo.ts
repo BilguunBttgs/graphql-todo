@@ -6,12 +6,10 @@ interface IUpdateTodo {
   isCompleted: boolean;
 }
 
-export const updateTodo = async (
-  _: any,
-  { _id, item, isCompleted }: IUpdateTodo
-) => {
+export const updateTodo = async (_: any, { _id, isCompleted }: IUpdateTodo) => {
+  console.log("UPDATE TODO WORKING");
   const todo = await todoModel.findByIdAndUpdate(_id, {
-    item,
     isCompleted: isCompleted,
   });
+  return todo;
 };
